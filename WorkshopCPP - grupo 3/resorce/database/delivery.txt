@@ -1,0 +1,20 @@
+Loja
+150800
+18
+Tamales ,  Humas,  Repe , Cafe
+Pichincha
+3000000
+15
+Hornado, Fritada, Empanadas de Morocho
+Cotopaxi
+488716
+13
+Chugchucaras, Hallullas, Tamales
+El Oro
+250000
+18
+mariscos
+Guayas
+2500000
+30
+ceviche  camarones, pescado
