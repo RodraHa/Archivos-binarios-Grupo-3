@@ -5,6 +5,7 @@
 //#include <cstring>
 #include <sstream> 
 #include "../lib/global.h"
+#include <limits>
 
 using namespace std;
 struct provincia
@@ -172,19 +173,21 @@ void agregarProvincia()
         cout <<endl << "-- Ingresar datos de provincia  -- " << endl ;
         cout <<"<+> Nombre: ";
         cin.getline (prov.sNombre, 50, '\n');
-        fflush(stdin);
-        setColor(0,2);
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cout <<"<+> Poblacion: ";
         cin >> prov.iPoblacion;
-        
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cout <<"<+> Temperatura: ";
         cin >> prov.fTemperatura;
-
         cin.clear();
-        fflush(stdin);
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         setColor(0,4);
         cout <<"<+> PlatoTipico (separados por coma): ";
-        cin.getline (prov.lstPlatoTipico, 200, '\n');
+        cin.getline (prov.lstPlatoTipico, 100, '\n');
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         
         if (!existRepetido(prov.sNombre))
         {
@@ -196,8 +199,6 @@ void agregarProvincia()
         cout << "Deseas salir (s): " ;
         cin >> str;
         cin.clear();
-        fflush(stdin);
-        //cin.ignore();
     } while (str != "s");
 }
 void Buscarprovincia()
